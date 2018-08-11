@@ -22,7 +22,6 @@ public class Grabber : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		if(!isGrabbing){
 			if(other.GetComponent<Book>()){
-				Debug.Log("Touching Book");
 				currentBook = other.gameObject;
 			}
 		}
@@ -32,7 +31,6 @@ public class Grabber : MonoBehaviour {
 	void OnTriggerExit(Collider other){
 		if (!isGrabbing){
 			if(other.GetComponent<Book>()){
-				Debug.Log("Touching Book");
 				currentBook = null;
 			}
 		}
@@ -66,6 +64,8 @@ public class Grabber : MonoBehaviour {
 		if (isGrabbing){
 			currentBook.transform.localPosition=Vector3.zero;
 			currentBook.transform.localRotation=Quaternion.identity;
+			Book bookScript = currentBook.GetComponent<Book>();
+			bookScript.isOnBookshelf = false;
 		}
 		
 	}
