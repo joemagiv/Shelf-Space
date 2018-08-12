@@ -83,5 +83,9 @@ public class ScoreKeeper : MonoBehaviour {
 			GameOver();
 		}
 		
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			Application.Quit();
+		}
+		
 	}
 }
