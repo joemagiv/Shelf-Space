@@ -13,9 +13,15 @@ public class Grabber : MonoBehaviour {
 	public Transform booksParent;
 	
 	public Transform bookHoldingParent;
+	
+	public AudioClip pickUpBook;
+	public AudioClip dropBook;
+	
+	private AudioSource audioSource;
 
 	// Use this for initialization
 	void Start () {
+		audioSource = GetComponent<AudioSource>();
 		
 	}
 	
@@ -48,8 +54,9 @@ public class Grabber : MonoBehaviour {
 				isGrabbing = false;
 				bookRb.useGravity = true;
 				collider.enabled = true;
-				
 				currentBook =null;
+				audioSource.clip = dropBook;
+				audioSource.Play();
 			}
 			if(currentBook!=null){
 				currentBook.transform.parent = bookHoldingParent.transform;
@@ -58,6 +65,8 @@ public class Grabber : MonoBehaviour {
 				collider.enabled = false;
 				isGrabbing = true;
 				bookRb.useGravity = false;
+				audioSource.clip = pickUpBook;
+				audioSource.Play();
 			} 
 
 		}

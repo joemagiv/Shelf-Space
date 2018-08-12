@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65353037508088552}
   - component: {fileID: 54444962931600754}
   - component: {fileID: 114256682247031038}
+  - component: {fileID: 82066871021792328}
   m_Layer: 0
   m_Name: Book
   m_TagString: Book
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828318378458446}
   m_LocalRotation: {x: -0.14670312, y: 0.66613203, z: 0.730977, w: 0.020470385}
-  m_LocalPosition: {x: 5.788, y: 6.7067776, z: -0.59}
+  m_LocalPosition: {x: 5.1192036, y: 4.51, z: -2.246105}
   m_LocalScale: {x: 0.39865407, y: 0.39865407, z: 0.39865407}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,7 +60,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: c96809a6b9134bd4abb5df7a1f251de9, type: 3}
+  - {fileID: 2100000, guid: 32480f1c49e32454088cd5e90f29ceea, type: 2}
+  - {fileID: 2100000, guid: a597a39ffe56438489039500fa321427, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +87,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828318378458446}
-  m_Mesh: {fileID: 4300000, guid: c96809a6b9134bd4abb5df7a1f251de9, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 929781f507d312e4c88730142d1cd08f, type: 3}
 --- !u!54 &54444962931600754
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -113,6 +115,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99938434, y: 0.30517328, z: 1.0825644}
   m_Center: {x: -0.0034340182, y: -0.0000004992913, z: -2.3849744e-10}
+--- !u!82 &82066871021792328
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828318378458446}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a8328cc51910bb84795532d4c646204e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 5
+  MinDistance: 1
+  MaxDistance: 17.44
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.99632263
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.909091
+      outSlope: -1.909091
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114256682247031038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,8 +223,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplierY: 0
   multiplierZ: 0
+  materials:
+  - {fileID: 2100000, guid: 32480f1c49e32454088cd5e90f29ceea, type: 2}
+  - {fileID: 2100000, guid: c672ed43b6645e6449314c35263a275e, type: 2}
+  - {fileID: 2100000, guid: 5332c29c62bae3944bbc5a04d6556831, type: 2}
+  - {fileID: 2100000, guid: 89efdadb0dc52544eb0d39a2016672cb, type: 2}
   possibleMultipliers:
   - 1
   - 1.25
   - 1.5
+  audioClips:
+  - {fileID: 8300000, guid: a8328cc51910bb84795532d4c646204e, type: 3}
+  - {fileID: 8300000, guid: 2cb132430e598ab4ea9df9d2e93aabec, type: 3}
+  - {fileID: 8300000, guid: 6783225a60b11d44c9bbae13e9bc3962, type: 3}
   isOnBookshelf: 0
